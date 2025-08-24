@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "colorcodehelper",
+  "version": "${version}",
+  "name": "ColorCodeHelper",
+  "description": "Allows you to view the available colors in Minecraft, copy these colors easily, and test messages with colors directly in-game",
+  "authors": ["k1llm3sixy"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/colorcodehelper/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.k1llm3sixy.colorcodehelper.ColorCodeHelperClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric": "*",
+    "minecraft": ">=1.20.1"
+  }
+}
