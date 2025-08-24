@@ -7,14 +7,8 @@ import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource
 import net.minecraft.text.Text
-
-const val MESSAGE_HELP = """
-                        §7» §eAvailable commands:
-                        §6/colorhelper test <message> §7- Allow you to test your message with colors. §bExample: &1&lhi!
-                        §6/colorhelper colors §7- Shows available color codes
-                        §7» P.S: §aColors on most servers use the ampersand (§f&) §ainstead of the section sign, which is §cinvisible in Minecraft chat and cannot be used
-                        §7» P.S2: §a/colorhelper test automatically §creplaces §athe ampersand (§f&§a) §cwith the section sign
-                    """
+import com.k1llm3sixy.colorcodehelper.enum.Translatable.*
+import com.k1llm3sixy.colorcodehelper.enum.translate
 
 object Commands {
     fun register() {
@@ -27,7 +21,14 @@ object Commands {
         dispatcher.register(
             ClientCommandManager.literal("colorhelper")
                 .executes {
-                    it.source.sendFeedback(Text.literal(MESSAGE_HELP.trimIndent()))
+                    val messageHelp = Text.empty()
+                        .append(MESSAGE_HELP_1.translate())
+                        .append(MESSAGE_HELP_2.translate())
+                        .append(MESSAGE_HELP_3.translate())
+                        .append(MESSAGE_HELP_4.translate())
+                        .append(MESSAGE_HELP_5.translate())
+
+                    it.source.sendFeedback(messageHelp)
                     1
                 }
                 .then(
