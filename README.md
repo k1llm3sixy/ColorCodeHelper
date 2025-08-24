@@ -1,6 +1,7 @@
+# ENG
 # ColorCodeHelper
 
-Minecraft mod that allows you to view the available colors in Minecraft, copy these colors easily, and test messages with colors directly in-game
+Mod that allows you to view the available colors in Minecraft, copy these colors easily, and test messages with colors directly in-game
 
 ## Features
 
@@ -25,3 +26,32 @@ The `/colorhelper test` command automatically replaces the ampersand (`&`) with 
 ---
 
 Thank you for using ColorHelper! Make working with Minecraft colors easier and more convenient!
+
+# RUS
+# ColorCodeHelper
+
+Мод, который позволяет просматривать доступные цвета в Minecraft, легко копировать эти цвета и тестировать сообщения с цветами прямо в игре
+
+## Особенности
+
+- Просмотр всех доступных цветовых кодов Minecraft  
+- Копирование цветовых кодов для удобного использования  
+- Тестирование сообщений с цветовыми кодами, чтобы увидеть, как они будут отображаться в чате  
+
+## Команды
+
+- `/colorhelper` - помощь
+
+- `/colorhelper test <сообщение>` - позволяет протестировать ваше сообщение с цветами
+
+- `/colorhelper colors` - отображает доступные цветовые коды
+
+## Примечание
+
+Большинство серверов используют амперсанд (`&`) вместо символа параграфа (`§`), который невидим в чате Minecraft и не может использоваться напрямую
+
+Команда `/colorhelper test` автоматически заменяет амперсанд (`&`) на символ параграфа (`§`) для правильного отображения цветов
+
+---
+
+Спасибо за использование ColorHelper! Делайте работу с цветами Minecraft проще и удобнее!
