@@ -23,9 +23,9 @@
   "format.magic": "&k - §kMagic",
   "format.reset": "&r - §rReset",
   "color.copy": "Copy %s",
-  "message.help.1": "§7» §eAvailable commands:",
-  "message.help.2": "\n§6/colorhelper test <message> §7- Allow you to test your message with colors. §bExample: &1&lhi!",
-  "message.help.3": "\n§6/colorhelper colors §7- Shows available color codes",
-  "message.help.4": "\n§7» P.S: §aColors on most servers use the ampersand (§f&) §ainstead of the section sign, which is §cinvisible in Minecraft chat and cannot be used",
-  "message.help.5": "\n§7» P.S2: §a/colorhelper test automatically §creplaces §athe ampersand (§f&§a) §cwith the section sign"
+  "message.help_1": "§7» §eAvailable commands:",
+  "message.help_2": "\n§6/colorhelper test <message> §7- Allow you to test your message with colors. §bExample: &1&lhi!",
+  "message.help_3": "\n§6/colorhelper colors §7- Shows available color codes",
+  "message.help_4": "\n§7» P.S: §aColors on most servers use the ampersand (§f&) §ainstead of the section sign, which is §cinvisible in Minecraft chat and cannot be used",
+  "message.help_5": "\n§7» P.S2: §a/colorhelper test automatically §creplaces §athe ampersand (§f&§a) §cwith the section sign"
 }

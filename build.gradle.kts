@@ -24,6 +24,7 @@ dependencies {
     mappings("net.fabricmc:yarn:${project.property("yarn_mappings")}:v2")
     modImplementation("net.fabricmc:fabric-loader:${project.property("loader_version")}")
     modImplementation("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_version")}")
+    modImplementation("net.fabricmc:fabric-language-kotlin:${project.property("kotlin_loader_version")}")
     include("net.fabricmc:fabric-language-kotlin:${project.property("kotlin_loader_version")}")
 }
 

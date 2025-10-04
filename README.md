@@ -1,5 +1,4 @@
 # ENG
-# ColorCodeHelper
 
 Mod that allows you to view the available colors in Minecraft, copy these colors easily, and test messages with colors directly in-game
 
@@ -28,7 +27,6 @@ The `/colorhelper test` command automatically replaces the ampersand (`&`) with 
 Thank you for using ColorHelper! Make working with Minecraft colors easier and more convenient!
 
 # RUS
-# ColorCodeHelper
 
 Мод, который позволяет просматривать доступные цвета в Minecraft, легко копировать эти цвета и тестировать сообщения с цветами прямо в игре
 

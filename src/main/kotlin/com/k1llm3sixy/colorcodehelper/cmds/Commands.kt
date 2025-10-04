@@ -1,50 +1,47 @@
 package com.k1llm3sixy.colorcodehelper.cmds
 
-import com.k1llm3sixy.colorcodehelper.main.Main
+import com.k1llm3sixy.colorcodehelper.color.ColorBuilder
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.arguments.StringArgumentType
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource
 import net.minecraft.text.Text
-import com.k1llm3sixy.colorcodehelper.enum.Translatable.*
-import com.k1llm3sixy.colorcodehelper.enum.translate
 
+const val CMD_MAIN = "colorhelper"
+const val CMD_COLORS = "colors"
+const val CMD_TEST = "test"
 object Commands {
-    fun register() {
-        ClientCommandRegistrationCallback.EVENT.register { dispatcher, _ ->
-            commands(dispatcher)
-        }
-    }
+    fun register() = ClientCommandRegistrationCallback.EVENT.register { dispatcher, _ -> setupCommands(dispatcher) }
 
-    fun commands(dispatcher: CommandDispatcher<FabricClientCommandSource>) {
+    fun setupCommands(dispatcher: CommandDispatcher<FabricClientCommandSource>) {
         dispatcher.register(
-            ClientCommandManager.literal("colorhelper")
+            ClientCommandManager.literal(CMD_MAIN)
                 .executes {
-                    val messageHelp = Text.empty()
-                        .append(MESSAGE_HELP_1.translate())
-                        .append(MESSAGE_HELP_2.translate())
-                        .append(MESSAGE_HELP_3.translate())
-                        .append(MESSAGE_HELP_4.translate())
-                        .append(MESSAGE_HELP_5.translate())
-
-                    it.source.sendFeedback(messageHelp)
+                    it.source.sendFeedback(
+                        Text.empty()
+                            .append(Text.translatable("message.help_1"))
+                            .append(Text.translatable("message.help_2"))
+                            .append(Text.translatable("message.help_3"))
+                            .append(Text.translatable("message.help_4"))
+                            .append(Text.translatable("message.help_5"))
+                    )
                     1
                 }
                 .then(
-                    ClientCommandManager.literal("colors")
+                    ClientCommandManager.literal(CMD_COLORS)
                         .executes {
-                            it.source.sendFeedback(Main.showColors())
+                            it.source.sendFeedback(ColorBuilder.getColors())
                             1
                         }
                 )
                 .then(
-                    ClientCommandManager.literal("test")
+                    ClientCommandManager.literal(CMD_TEST)
                         .then(
                             ClientCommandManager.argument("message", StringArgumentType.greedyString())
-                                .executes { context ->
-                                    val message = StringArgumentType.getString(context, "message").replace('&', '§')
-                                    context.source.sendFeedback(Text.literal("» $message"))
+                                .executes { ctx ->
+                                    val message = StringArgumentType.getString(ctx, "message").replace('&', '§')
+                                    ctx.source.sendFeedback(Text.literal("» $message"))
                                     1
                                 }
                         )

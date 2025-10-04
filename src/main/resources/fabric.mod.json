@@ -5,13 +5,17 @@
   "name": "ColorCodeHelper",
   "description": "Allows you to view the available colors in Minecraft, copy these colors easily, and test messages with colors directly in-game",
   "authors": ["k1llm3sixy"],
-  "contact": {},
+  "contact": {
+    "email": "k1llm3sixy@gmail.com",
+    "sources": "https://github.com/k1llm3sixy/ColorCodeHelper",
+    "issues": "https://github.com/k1llm3sixy/ColorCodeHelper/issues"
+  },
   "license": "All-Rights-Reserved",
   "icon": "assets/colorcodehelper/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "com.k1llm3sixy.colorcodehelper.ColorCodeHelperClient"
+      "com.k1llm3sixy.colorcodehelper.ColorCodeHelper"
     ]
   },
   "depends": {
